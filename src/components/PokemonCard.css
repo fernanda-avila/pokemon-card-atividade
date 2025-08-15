@@ -1,0 +1,42 @@
+.pokemon-card {
+    border: 4px solid transparent;
+    position: relative;
+  }
+  
+  .pokemon-card::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 20px;
+    padding: 4px;
+    background: linear-gradient(
+      120deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00ab,
+      #ff0000
+    );
+    background-size: 300% 300%;
+    animation: brilho 4s linear infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  
+  @keyframes brilho {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
