@@ -1,5 +1,6 @@
 import React from "react";
 import PokemonCard from "./components/PokemonCard";
+import Sidebar from "./components/Sidebar";
 
 export default function App() {
   return (
@@ -11,13 +12,13 @@ export default function App() {
         backgroundColor: "#f0f0f0",
         minHeight: "100vh",
 
-        // centralizar horizontal e verticalmente
         justifyContent: "center",
         alignItems: "center",
 
-        flexWrap: "wrap", // para quebrar linha se precisar
+        flexWrap: "wrap",
       }}
     >
+      <Sidebar />
       <PokemonCard
         name="Greninja"
         img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfaDCRgg6PLKLmBXQG1gSIX54jiJ6DyPKC8Q&s"
